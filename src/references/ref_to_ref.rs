@@ -22,7 +22,7 @@ pub fn ref_to_ref() {
 
     let rrx = &&x;
     let rry = &&y;
-    assert!(rr.y == rr.x);
+    assert!(rry == rrx);
     // we `std::ptr::eq` to compare address, instead of pointee
-    assert!(std::ptr::eq(rx, ry));
+    assert!(!std::ptr::eq(rx, ry));
 }

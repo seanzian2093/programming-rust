@@ -1,19 +1,24 @@
 // No need to use `pub`
+// `mod xxx` cause Rust to load either `xxx/mod.rs` or `xxx.rs`
+// - `xxx/mod.rs` loads submodules from `xxx/submodule.rs`
+mod enums;
+mod expression;
 mod fundamental_types;
 mod ownership_move;
 mod references;
+mod structs;
 
 use {
+    enums::*,
+    enums::*,
+    expression::*,
     fundamental_types::{
         array_vec_slice::*, bool_type::*, char_type::*, fixed_width_numeric::*, string_types::*,
     },
-    ownership_move::{copy_types::*, moves::*},
-    references::{
-        ref_safety::ref_safety,
-        ref_to_expr::{self, *},
-        ref_to_ref::*,
-        ref_to_values::*,
-    },
+    // ownership_move::{copy_types::*, moves::*},
+    ownership_move::*,
+    references::{ref_safety::*, *},
+    structs::*,
 };
 fn main() {
     // convert_integer_in_range();
@@ -37,5 +42,8 @@ fn main() {
     // ref_to_values();
     // ref_to_ref();
     // ref_to_expr();
-    ref_safety();
+    // ref_safety();
+    // control_flow_in_loop();
+    // interior_mutability();
+    match_patterns();
 }
