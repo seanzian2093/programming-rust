@@ -7,18 +7,18 @@ mod fundamental_types;
 mod ownership_move;
 mod references;
 mod structs;
+mod traits_generics;
 
 use {
-    enums::*,
     enums::*,
     expression::*,
     fundamental_types::{
         array_vec_slice::*, bool_type::*, char_type::*, fixed_width_numeric::*, string_types::*,
     },
-    // ownership_move::{copy_types::*, moves::*},
     ownership_move::*,
-    references::{ref_safety::*, *},
+    references::*,
     structs::*,
+    traits_generics::*,
 };
 fn main() {
     // convert_integer_in_range();
@@ -45,5 +45,7 @@ fn main() {
     // ref_safety();
     // control_flow_in_loop();
     // interior_mutability();
-    match_patterns();
+    // match_patterns();
+    // use_traits();
+    use_dot_g();
 }
