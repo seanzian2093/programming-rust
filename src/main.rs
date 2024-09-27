@@ -1,24 +1,32 @@
 // No need to use `pub`
 // `mod xxx` cause Rust to load either `xxx/mod.rs` or `xxx.rs`
 // - `xxx/mod.rs` loads submodules from `xxx/submodule.rs`
+mod closures;
 mod enums;
 mod expression;
 mod fundamental_types;
+mod iterators;
+mod operator_overload;
 mod ownership_move;
 mod references;
 mod structs;
 mod traits_generics;
+mod utility_traits;
 
 use {
+    closures::*,
     enums::*,
     expression::*,
     fundamental_types::{
         array_vec_slice::*, bool_type::*, char_type::*, fixed_width_numeric::*, string_types::*,
     },
+    iterators::*,
+    operator_overload::*,
     ownership_move::*,
     references::*,
     structs::*,
     traits_generics::*,
+    utility_traits::*,
 };
 fn main() {
     // convert_integer_in_range();
@@ -47,5 +55,11 @@ fn main() {
     // interior_mutability();
     // match_patterns();
     // use_traits();
-    use_dot_g();
+    // use_dot_g();
+    // operator_overload();
+    // use_utility_traits();
+    // use_fn_closure();
+    // use_iterators();
+    // use_adapters();
+    consume_iterators();
 }
