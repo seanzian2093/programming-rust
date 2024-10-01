@@ -6,6 +6,7 @@ mod collections;
 mod enums;
 mod expression;
 mod fundamental_types;
+mod input_output;
 mod iterators;
 mod operator_overload;
 mod ownership_move;
@@ -22,6 +23,7 @@ use {
     fundamental_types::{
         array_vec_slice::*, bool_type::*, char_type::*, fixed_width_numeric::*, string_types::*,
     },
+    input_output::*,
     iterators::*,
     operator_overload::*,
     ownership_move::*,
@@ -64,5 +66,6 @@ fn main() {
     // use_iterators();
     // use_adapters();
     // consume_iterators();
-    use_collections();
+    // use_collections();
+    use_osstr_path();
 }
