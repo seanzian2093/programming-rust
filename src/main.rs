@@ -2,6 +2,7 @@
 // `mod xxx` cause Rust to load either `xxx/mod.rs` or `xxx.rs`
 // - `xxx/mod.rs` loads submodules from `xxx/submodule.rs`
 mod closures;
+mod collections;
 mod enums;
 mod expression;
 mod fundamental_types;
@@ -15,6 +16,7 @@ mod utility_traits;
 
 use {
     closures::*,
+    collections::*,
     enums::*,
     expression::*,
     fundamental_types::{
@@ -61,5 +63,6 @@ fn main() {
     // use_fn_closure();
     // use_iterators();
     // use_adapters();
-    consume_iterators();
+    // consume_iterators();
+    use_collections();
 }
